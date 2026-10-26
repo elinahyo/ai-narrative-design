@@ -22,3 +22,7 @@
 @media print{.lesson-mode .lesson-top,.lesson-mode .lesson-heading,.lesson-mode .reader-origin,.lesson-mode .lesson-toc,.lesson-mode .slide-controls,.lesson-mode .reader-bottom{display:none}.lesson-mode .reader-layout{display:block}.slide-stage{box-shadow:none;break-inside:avoid}}
 .reader-feedback{font-size:11px;color:var(--muted);margin-top:8px}.reader-feedback:empty{display:none}.presentation-mode .lesson-toc,.presentation-mode .lesson-heading,.presentation-mode .reader-origin{display:none}.presentation-mode .reader-layout{display:block;margin-top:16px}.presentation-mode main{max-width:1600px;padding:14px 24px}.presentation-mode .slide-stage{min-height:calc(100dvh - 220px);aspect-ratio:auto}.presentation-mode .slide-heading h2{font-size:clamp(30px,3.3vw,48px)}.presentation-mode .slide-items{margin:30px 0}.presentation-mode .slide-cover .slide-heading h2{font-size:clamp(34px,4.8vw,64px)}
 @media(max-width:650px){.presentation-mode main{padding:12px}.presentation-mode .slide-stage{min-height:460px}.presentation-mode .slide-heading h2{font-size:27px}.presentation-mode .slide-cover .slide-heading h2{font-size:33px}}
+/* Allow long slides to grow without overlapping the navigation controls. */
+.slide-stage{aspect-ratio:auto;min-height:clamp(550px,calc((100vw - 334px)*.5625),720px)}.slide-stage>*{flex-shrink:0}.slide-footer{flex-shrink:0}
+@media(max-width:1099px){.slide-stage{min-height:530px}}
+@media(max-width:650px){.slide-stage{min-height:460px}}
